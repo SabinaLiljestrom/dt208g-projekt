@@ -5,7 +5,7 @@ import { MatSortModule, MatSort } from '@angular/material/sort';
 import { DataTableDataSource, DataTableItem } from './data-table-datasource';
 
 @Component({
-  selector: 'app-data-table',
+  selector: 'data-table',
   templateUrl: './data-table.component.html',
   styleUrl: './data-table.component.scss',
   standalone: true,
