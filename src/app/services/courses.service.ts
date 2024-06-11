@@ -10,6 +10,6 @@ export class CoursesService {
   private url: string = '../assets/json/courses.json';
   constructor(private http: HttpClient) {}
   getCourses(): Observable<Course[]> {
-    return this.http.get<Course[]>(this.url); // Make sure the type is Course[]
+    return this.http.get<Course[]>(this.url); 
   }
 }
