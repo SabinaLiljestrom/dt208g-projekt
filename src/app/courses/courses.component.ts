@@ -18,7 +18,7 @@ import { FormsModule } from '@angular/forms';
   imports: [CommonModule, MatTableModule, MatSortModule, MatPaginatorModule, MatSelectModule, MatFormFieldModule, FormsModule],
 })
 export class CoursesComponent implements AfterViewInit {
-  displayedColumns: string[] = ['courseCode', 'courseName', 'progression', 'subject', 'points', 'syllabus']; //olika kolumner i tabellen
+  displayedColumns: string[] = ['courseCode', 'courseName', 'progression', 'subject', 'points', 'syllabus', 'save']; //olika kolumner i tabellen
   dataSource = new MatTableDataSource<Course>([]);
   subjects: string[] = []; // Array för att hålla unika ämnen
   courses: Course[] = [];
@@ -32,22 +32,19 @@ export class CoursesComponent implements AfterViewInit {
   ngAfterViewInit() {
     this.coursesService.getCourses().subscribe(courses => {
       this.dataSource.data = courses;
-      this.courses = courses;
-      this.searchedCourses = courses;
       this.dataSource.sort = this.sort;
       this.dataSource.paginator = this.paginator;
       this.paginator.pageSize = 10;
-
-      // Hämta unika ämnen
-      this.subjects = [...new Set(courses.map(course => course.subject))];
-      console.log('Subjects:', this.subjects); // Loggar ämnena i arrayen
+      this.subjects = [...new Set(courses.map(course => course.subject))]; // Hämta unika ämnen
     });
   }
 
+/** filtrering dropdown meny ämne **/
   applyFilter(subject: string) {
     this.dataSource.filterPredicate = (data: Course, filter: string) => data.subject === filter;
     this.dataSource.filter = subject;
   }
+   /** filtrering sökruta **/
   applySearch(): void {
     const filterValueLower = this.filterValue.trim().toLowerCase();
     this.dataSource.filter = filterValueLower;
@@ -56,7 +53,14 @@ export class CoursesComponent implements AfterViewInit {
              data.courseName.toLowerCase().includes(filter);
     };
   }
-  /** sortering **/
+  /** spara knapp **/
+  saveCourse(course: Course): void {
+    const savedCourses = JSON.parse(localStorage.getItem('savedCourses') || '[]');
+    savedCourses.push(course);
+    localStorage.setItem('savedCourses', JSON.stringify(savedCourses));
+    alert('Kurs sparad!');
+  }
+  /** om sortering ändras  **/
   announceSortChange(sortState: Sort) {
     if (sortState.direction) {
       this._liveAnnouncer.announce(`Sorted ${sortState.direction}ending`);
