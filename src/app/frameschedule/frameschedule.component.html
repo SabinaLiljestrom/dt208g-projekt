@@ -1,1 +1,23 @@
-<p>frameschedule works!</p>
+<h2>Sparade Kurser</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Kurskod</th>
+      <th>Kursnamn</th>
+      <th>Progression</th>
+      <th>Ämne</th>
+      <th>Poäng</th>
+      <th>Kursplan</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let course of savedCourses">
+      <td>{{ course.courseCode }}</td>
+      <td>{{ course.courseName }}</td>
+      <td>{{ course.progression }}</td>
+      <td>{{ course.subject }}</td>
+      <td>{{ course.points }}</td>
+      <td><a [href]="course.syllabus">Länk kursplan</a></td>
+    </tr>
+  </tbody>
+</table>
