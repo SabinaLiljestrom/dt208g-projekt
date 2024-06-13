@@ -24,4 +24,10 @@ addCourse(course: Course) {
   localStorage.setItem(this.storageKey, JSON.stringify(courses));
   this.coursesSubject.next(courses); // Uppdatera observablen
 }
+removeCourse(courseCode: string) {
+  let courses = this.getCoursesFromLocalStorage();
+  courses = courses.filter(course => course.courseCode !== courseCode);
+  localStorage.setItem(this.storageKey, JSON.stringify(courses));
+  this.coursesSubject.next(courses); // Uppdatera observablen
+}
 }

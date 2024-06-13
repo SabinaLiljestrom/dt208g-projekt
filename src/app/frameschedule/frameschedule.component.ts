@@ -19,4 +19,7 @@ export class FramescheduleComponent implements OnInit {
       this.savedCourses = courses;
     });
   }
+  removeCourse(courseCode: string) {
+    this.FramescheduleService.removeCourse(courseCode);
+  }
 }

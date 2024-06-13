@@ -18,6 +18,7 @@
       <td>{{ course.subject }}</td>
       <td>{{ course.points }}</td>
       <td><a [href]="course.syllabus">Länk kursplan</a></td>
+      <td><button mat-button (click)="removeCourse(course.courseCode)">Ta bort</button></td>
     </tr>
   </tbody>
 </table>
