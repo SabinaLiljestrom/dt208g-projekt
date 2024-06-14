@@ -27,7 +27,7 @@ nav a {
 nav a:hover, 
 nav a .current {
 	/*--när man för musen över länkar i menyn--*/
-	background-color: #a898ba;
+	background-color:#93CCBE;
 	cursor: pointer;
 }
 
@@ -50,9 +50,21 @@ nav ul li {
 	text-align: left;
 	background-color: #ffff;
 	background-repeat: repeat-x;
-	border-bottom: 1px solid #a898ba;
+	border-bottom: 1px solid #93CCBE;
 }
 
-#main-header.current {
-    background-color: aqua;
-}
+.logo {
+    width: 10em;
+ }
+
+ .header {
+	width: 100%;
+	height: auto;
+  }
+
+  #logga {
+    grid-area: 1/1/2/3;
+  }
+  #nav {
+	grid-area: 2/1/4/3;
+  }
