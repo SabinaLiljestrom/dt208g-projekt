@@ -1,8 +1,32 @@
-table {
-    width: 100%;
-     
-  }
+
   
   th.mat-sort-header-sorted {
     color: black;
   }
+
+  #filter {
+    max-width: 100%;
+    width: 100vw; 
+}
+.courseCodeHeader, .courseCodeCell,
+.courseNameHeader, .courseNameCell,
+.progressionHeader, .progressionCell,
+.subjectHeader, .subjectCell,
+.pointsHeader, .pointsCell,
+.syllabusHeader, .syllabusCell {
+  display: table-cell;
+
+}
+  @media (max-width: 600px) {
+    .courseCodeHeader, .courseCodeCell,
+    .progressionHeader, .progressionCell,
+    .subjectHeader, .subjectCell,
+    .syllabusHeader, .syllabusCell {
+      display: none;
+    }
+   
+}
+  button:hover {
+    background-color: #93CCBE;
+  }
+

@@ -10,5 +10,6 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class HeaderComponent {
   logga: string ="assets/images/logo.png";
-  header: string ="assets/images/header.jpg";
+  header: string ="assets/images/header.png";
+  headerMobile: string ="assets/images/headerMobile.png"
 }

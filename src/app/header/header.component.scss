@@ -53,18 +53,33 @@ nav ul li {
 	border-bottom: 1px solid #93CCBE;
 }
 
-.logo {
-    width: 10em;
- }
-
  .header {
 	width: 100%;
 	height: auto;
   }
-
-  #logga {
-    grid-area: 1/1/2/3;
+  @media (max-width: 600px) { 
+	.header {
+		display: none;
+	}
+	.logo {
+		width: 20%;
+		margin: 15px 0 0 0;
+		padding: 0px;
+		position: absolute;
+	 }
   }
-  #nav {
-	grid-area: 2/1/4/3;
+  @media (min-width: 600px) { 
+	.headerMobile {
+		display: none;
+	}
+	.logo {
+		width: 12%;
+		margin: 0px;
+		padding: 0px;
+		position: absolute;
+	 }
+  }
+  .headerMobile {
+	width: 100%;
+	height: auto;
   }
