@@ -1,0 +1,45 @@
+img {
+    width: 100%;
+	height: auto;
+}
+h1 {
+    font-weight: 500;
+    color:  #93CCBE;
+}
+.small {
+    width: 30%;
+  
+}
+.puff {
+text-align: center;
+}
+
+a:link {
+	color: #000000;
+	text-decoration: none;
+   
+	}
+	a:visited {
+	color: #000;
+	text-decoration: none;
+	}
+	a:hover {
+	color: #93CCBE;
+	}
+
+    #box1 {
+        grid-area: 1/1/5/5;
+    
+      }
+    
+      #box2 {
+        grid-area: 1/1/2/5;
+      }
+    
+      #box3 {
+        grid-area: 2/1/3/5;
+      }
+    
+      #box4 {
+        grid-area: 3/3/4/5;
+      }

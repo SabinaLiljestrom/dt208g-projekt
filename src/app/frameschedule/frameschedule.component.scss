@@ -1,0 +1,17 @@
+.courseCodeHeader, .courseCodeCell,
+.courseNameHeader, .courseNameCell,
+.progressionHeader, .progressionCell,
+.subjectHeader, .subjectCell,
+.pointsHeader, .pointsCell,
+.syllabusHeader, .syllabusCell {
+  display: table-cell;
+
+}
+  @media (max-width: 600px) {
+    .courseCodeHeader, .courseCodeCell,
+    .progressionHeader, .progressionCell,
+    .subjectHeader, .subjectCell,
+    .syllabusHeader, .syllabusCell {
+      display: none;
+    }
+}
