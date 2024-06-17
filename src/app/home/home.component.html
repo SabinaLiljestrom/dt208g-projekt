@@ -1,7 +1,24 @@
 <div class="box1">
-    <img [src] = "campus" class = "campus" alt="header">
+    <img [src]="campus" class="campus" alt="header">
   </div>
-<h1>Välkommen till Ditt Universitet!</h1>
-<div class="box2">  <a href="" class="puff"><img [src] = "students" class = "small" alt="glada studenter">Ny student? <br> Här hittar du nödvändig information inför skolstart.</a></div>
-<div class="box3"> <a href="" class="puff"><img [src] = "gym" class = "small" alt="två killar som stretchar">Nyhet <br> Nytt utegym direkt i anslutning till cmapus.</a></div>
-<div class="box4"> <a href="" class="puff"><img [src] = "books" class = "small" alt="böcker">Biblioteket <br> Din bästa vän som student, här kan du få hjälp med mer än att hitta böcker.</a></div>
+  <h1>Välkommen till Ditt Universitet!</h1>
+  <div class="boxes">
+  <div class="box2">
+    <a href="" class="puff">
+      <img [src]="students" class="small" alt="glada studenter">
+      <span>Ny student? <br> Här hittar du nödvändig information inför skolstart.</span>
+    </a>
+  </div>
+  <div class="box3">
+    <a href="" class="puff">
+      <img [src]="gym" class="small" alt="två killar som stretchar">
+      <span>Nyhet <br> Nytt utegym direkt i anslutning till campus.</span>
+    </a>
+  </div>
+  <div class="box4">
+    <a href="" class="puff">
+      <img [src]="books" class="small" alt="böcker">
+      <span>Biblioteket <br> Din bästa vän som student, här kan du få hjälp med mer än att bara hitta böcker.</span>
+    </a>
+  </div>
+  </div>

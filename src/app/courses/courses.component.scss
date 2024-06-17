@@ -1,12 +1,9 @@
 
-  
-  th.mat-sort-header-sorted {
-    color: black;
-  }
-
   #filter {
-    max-width: 100%;
+    max-width: 500px;
+    height: 40px;
     width: 100vw; 
+    margin:  0  0 20px 20px;
 }
 .courseCodeHeader, .courseCodeCell,
 .courseNameHeader, .courseNameCell,
