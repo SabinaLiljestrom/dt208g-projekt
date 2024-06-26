@@ -4,8 +4,10 @@
 }
 
 h1 {
+  font-size: 42px;
     font-weight: 500;
-    color:  #93CCBE;
+    color:  black;
+    text-shadow: #93CCBE;
 }
 .small {
     width: 70%;
@@ -18,19 +20,19 @@ h1 {
   /* Styla bilderna */
   .box1 img, .box2 img, .box3 img, .box4 img {
     display: block;
-    margin: 0 auto; /* Centrera bilden */
+    margin: 0 auto; 
   }
   
   /* Styla länkarna */
   .puff {
     display: inline-block; /* Gör länken block för att kunna centrera texten under bilden */
     text-decoration: none; /* Ta bort understrykningen */
-    color: inherit; /* Behåll textfärgen */
+    color: inherit; 
   }
   
   .puff span {
-    display: block; /* Gör texten block för att hamna under bilden */
-    margin-top: 10px; /* Avstånd mellan bild och text */
+    display: block; /* texten block för att hamna under bilden */
+    margin-top: 10px; 
   }
   .boxes {
     display: flex;
@@ -39,20 +41,20 @@ h1 {
   }
   
   .box2, .box3, .box4 {
-    flex: 1 1 30%; /* Flexibla boxar som tar upp 30% av bredden */
+    flex: 1 1 30%; /* Flex boxar tar upp 30% av bredden */
     box-sizing: border-box; /* Inkludera padding och border i boxens totala bredd */
     margin: 10px;
   }
   
-  /* Mobil layout */
+  /* Mobil  */
   @media (max-width: 600px) {
     .boxes {
-      flex-direction: column; /* Lägg boxarna i en kolumn */
+      flex-direction: column; /* boxarna i en kolumn */
     }
     .box2, .box3, .box4 {
       flex: 1 1 100%; /* Boxarna tar upp hela bredden */
       margin: 0;
-      margin-bottom: 20px; /* Lägg till marginal mellan boxarna på mobil */
+      margin-bottom: 20px; 
     }
   }
 a:link {

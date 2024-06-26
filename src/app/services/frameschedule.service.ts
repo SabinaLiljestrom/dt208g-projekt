@@ -29,14 +29,6 @@ export class FramescheduleService {
     return this.totalPointsSubject.asObservable();
   }
 
-  addCourse(course: Course) {
-    const courses = this.getCoursesFromLocalStorage();
-    courses.push(course);
-    localStorage.setItem(this.storageKey, JSON.stringify(courses));
-    this.coursesSubject.next(courses); // Uppdatera observablen
-    this.totalPointsSubject.next(this.calculateTotalPoints(courses)); // Uppdatera poäng
-  }
-
   removeCourse(courseCode: string) {
     let courses = this.getCoursesFromLocalStorage();
     courses = courses.filter(course => course.courseCode !== courseCode);

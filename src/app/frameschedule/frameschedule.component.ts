@@ -25,6 +25,6 @@ export class FramescheduleComponent implements OnInit {
     });
   }
   removeCourse(courseCode: string) {
-    this.FramescheduleService.removeCourse(courseCode);
+    this.FramescheduleService.removeCourse(courseCode); alert('Kurs borttagen!');
   }
 }
