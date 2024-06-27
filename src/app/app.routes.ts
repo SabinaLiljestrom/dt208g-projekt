@@ -8,5 +8,5 @@ export const routes: Routes = [
     {path: 'home', component: HomeComponent},
     {path: 'courses', component: CoursesComponent},
     {path: 'frameschedule', component: FramescheduleComponent},
-    {path: '', redirectTo: '/home', pathMatch: 'full'},
+    {path: '', redirectTo: 'home', pathMatch: 'full'},
 ];
