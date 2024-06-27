@@ -9,13 +9,14 @@ import { LiveAnnouncer } from '@angular/cdk/a11y';
 import { CoursesService } from '../services/courses.service';
 import { Course } from '../models/course';
 import { FormsModule } from '@angular/forms';
+import { FramescheduleComponent } from '../frameschedule/frameschedule.component';
 
 @Component({
   selector: 'app-courses',
   styleUrls: ['courses.component.scss'],
   templateUrl: 'courses.component.html',
   standalone: true,
-  imports: [CommonModule, MatTableModule, MatSortModule, MatPaginatorModule, MatSelectModule, MatFormFieldModule, FormsModule],
+  imports: [CommonModule, MatTableModule, MatSortModule, MatPaginatorModule, MatSelectModule, MatFormFieldModule, FormsModule, FramescheduleComponent],
 })
 export class CoursesComponent implements AfterViewInit {
   displayedColumns: string[] = ['courseCode', 'courseName', 'progression', 'subject', 'points', 'syllabus', 'save']; //olika kolumner i tabellen

@@ -8,11 +8,12 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { FramescheduleComponent } from './frameschedule/frameschedule.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, CoursesComponent, FooterComponent, MatTableModule, MatSortModule, MatFormFieldModule, MatSelectModule, MatPaginatorModule
+  imports: [RouterOutlet, HeaderComponent, CoursesComponent, FooterComponent, MatTableModule, MatSortModule, MatFormFieldModule, MatSelectModule, MatPaginatorModule, FramescheduleComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
